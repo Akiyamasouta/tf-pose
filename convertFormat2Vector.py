@@ -57,7 +57,7 @@ class CalculatAngle:
             
             print(angles)
             output = np.vstack((angles, output))
-            print(output.shape)
+            #print(output.shape)
 
         return output
         
