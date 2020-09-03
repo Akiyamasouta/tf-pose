@@ -1,5 +1,7 @@
 #video run
--python run_video_cor.py --model=mobilenet_thin --resize=432*368 --video=./etcs/1.mp4
+```
+$python run_video_cor.py --model=mobilenet_thin --resize=432*368 --video=./etcs/1.mp4
+```
 
 # tf-pose-estimation
 
