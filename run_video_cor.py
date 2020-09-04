@@ -23,6 +23,8 @@ ch.setFormatter(formatter)
 logger.addHandler(ch)
 
 fps_time = 0
+###########################
+start = time.time()
 
 
 if __name__ == '__main__':
@@ -53,7 +55,7 @@ if __name__ == '__main__':
 
     with open('test0.csv', 'a') as f:
             writer = csv.writer(f)
-            writer.writerow(["parts", "x", "y"])
+            writer.writerow(["parts", "x", "y", "t"])
 
     while cap.isOpened():
         ret_val, image = cap.read()
@@ -62,7 +64,7 @@ if __name__ == '__main__':
         humans = e.inference(image, resize_to_default=(w > 0 and h > 0), upsample_size=args.resize_out_ratio)
         #####################################################
         height, width = image.shape[0], image.shape[1]
-        number = 0
+        #number = 0
         with open('test0.csv', 'a') as f:
             writer = csv.writer(f)
            
@@ -78,16 +80,19 @@ if __name__ == '__main__':
                     #print(parts[i])
                     #print(body_part)
                     #print(debug_info)
-                    writer.writerow([parts[i], x, y])
-                number += 1
+                    now = time.time()
+                    t = now - start
+                    writer.writerow([parts[i], x, y, t])
+                #number += 1
                 #print(human)
-                print('number')
-                print(number)
-                print('##############')
+                #print('number')
+                #print(number)
+                #print('##############')
             cangle = CalculatAngle()
             angle = cangle.convertFormat2Vector(humans)
-            #print('肘、肩、膝')
-            #print(angle)
+            print('人の数:', len(humans))
+            print('肘、肩、膝')
+            print(angle)
         #####################################################
         if not args.showBG:
             image = np.zeros(image.shape)

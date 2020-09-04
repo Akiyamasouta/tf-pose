@@ -1,0 +1,11 @@
+{
+  "base_url": "/",
+  "hostname": "localhost",
+  "notebook_dir": "/home/akiyama/MLBook",
+  "password": false,
+  "pid": 1087,
+  "port": 8889,
+  "secure": false,
+  "token": "861c400a2f80bd58d748d620e02293512db5da6024884752",
+  "url": "http://localhost:8889/"
+}

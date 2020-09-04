@@ -1,0 +1,11 @@
+{
+  "base_url": "/",
+  "hostname": "localhost",
+  "notebook_dir": "/home/akiyama",
+  "password": false,
+  "pid": 1934,
+  "port": 8888,
+  "secure": false,
+  "token": "0d163789e369f0cb0bdab97fdc976e194af9e006361f2f02",
+  "url": "http://localhost:8888/"
+}

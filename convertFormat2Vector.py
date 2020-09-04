@@ -26,7 +26,7 @@ class CalculatAngle:
                 #print(human)
                 
                 for i in range(3):
-                    print(p[i])
+                    #print(p[i])
                     if p[i] not in human.body_parts.keys():
                         x[i] = 0.0
                         y[i] = 0.0
@@ -55,7 +55,7 @@ class CalculatAngle:
                 else:
                     angles.append(self.MISSING_VALUE)
             
-            print(angles)
+            #print(angles)
             output = np.vstack((angles, output))
             #print(output.shape)
 
